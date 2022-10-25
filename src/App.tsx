@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import DemoOutput from '@/components/Demo/DemoOutput';
+import { StyledButton } from '@/components/UI/Button/Button';
 import './App.css';
-import { StyledButton } from './components/UI/Button/Button';
 
 function App() {
   const [isShowParagraph, setIsShowParagraph] = useState(false);
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      {isShowParagraph && <p>This is new</p>}
+      <DemoOutput isShow={isShowParagraph} />
       <StyledButton onClick={toggleParagraphHandler}>Toggle Paragraph</StyledButton>
     </div>
   );
