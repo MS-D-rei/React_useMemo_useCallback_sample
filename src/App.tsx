@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      <DemoOutput isShow={isShowParagraph} />
+      {/* <DemoOutput isShow={isShowParagraph} /> */}
+      {/* state changes => App is re-evaluated => child components is also re-evaluated */}
+      <DemoOutput isShow={false} />
       <StyledButton onClick={toggleParagraphHandler}>Toggle Paragraph</StyledButton>
     </div>
   );
