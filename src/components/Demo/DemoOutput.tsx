@@ -1,3 +1,4 @@
+import React from "react";
 import Paragraph from "@/components/Demo/Paragraph";
 
 interface DemoOutputProps {
@@ -9,4 +10,4 @@ function DemoOutput({ isShow }: DemoOutputProps) {
   return <Paragraph>{isShow ? 'This is new' : ''}</Paragraph>;
 }
 
-export default DemoOutput;
+export default React.memo(DemoOutput);
